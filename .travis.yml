@@ -24,7 +24,7 @@ before_install:
 - echo ""               >> CBI/src/main/resources/credentials.txt
 - echo ""               >> CBI/src/main/resources/credentials.txt
 - echo "conversational" >> CBI/src/main/resources/credentials.txt
-- openssl aes-256-cbc -K $encrypted_c124cbaf5663_key -iv $encrypted_c124cbaf5663_iv -in ./CBI/resources/sql/dump.sql.enc -out ./CBI/resources/sql/dump.sql -d
+- openssl aes-256-cbc -K $encrypted_d410ab6d2fa4_key -iv $encrypted_d410ab6d2fa4_iv -in ./CBI/src/main/sql/dump.sql.enc -out ./CBI/src/main/sql/dump.sql -d
 - mysql -u root < CBI/resources/sql/dump.sql
 - mysql -e 'use conversational; select * from queries limit 5;'
 script:
